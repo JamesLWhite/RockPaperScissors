@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Shape } from 'app/models/shape.enum';
+import { Shapes, Shape } from 'app/models/shape-types';
+
 
 @Component({
   selector: 'app-shape',
@@ -8,7 +9,7 @@ import { Shape } from 'app/models/shape.enum';
 })
 export class ShapeComponent implements OnInit {
 
-  @Input() type: Shape;
+  @Input() shape: Shape;
   @Output() selectedShape = new EventEmitter<Shape>();
 
   constructor() { }
@@ -17,7 +18,7 @@ export class ShapeComponent implements OnInit {
   }
 
   select(){
-    this.selectedShape.emit(this.type);
+    this.selectedShape.emit(this.shape);
   }
 
 }

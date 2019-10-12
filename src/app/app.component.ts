@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Shape } from "app/models/shape.enum";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,5 @@ import { Shape } from "app/models/shape.enum";
 export class AppComponent {
   
   title = 'Rock Paper Scissors';
-
-  shape: Shape = Shape.Rock;
 
 }

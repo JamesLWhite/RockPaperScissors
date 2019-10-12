@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
-import { Shape } from 'app/models/shape.enum';
+import { Shapes, Shape } from 'app/models/shape-types';
 
 @Injectable({
   providedIn: 'root'
@@ -20,18 +20,9 @@ export class EngineService {
   submitResult(shape: Shape){
 
     let choosenShapeAI = Math.floor((Math.random()*3));
-    let choosenShapePC: number;
-
-    // TODO: Replace shape enum with selection of objects
-    // Convert chosen shape back to index
-    switch (shape){
-      case Shape.Rock: choosenShapePC = 0; break;
-      case Shape.Paper: choosenShapePC = 1; break;
-      case Shape.Scissors: choosenShapePC = 2; break;
-    }
 
     // Get result from score matrix
-    let result = this.engine[choosenShapeAI][choosenShapePC]
+    let result = this.engine[choosenShapeAI][shape.id]
     let winner: string;
     
     // Display result

@@ -1,3 +1,3 @@
 <div>{{winner}}</div>
-<div><i class="far fa-4x {{selectedType}}"></i></div>
-<app-shape *ngFor="let type of displayedShapes" (selectedShape)="selectShape($event)" [type]="type"></app-shape>
+<div *ngIf="selectedShape"><i class="far fa-4x {{selectedShape.icon}}"></i></div>
+<app-shape *ngFor="let type of displayedShapes" (selectedShape)="selectShape($event)" [shape]="type"></app-shape>
