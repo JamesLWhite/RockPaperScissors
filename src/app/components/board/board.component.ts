@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EngineService } from "app/services/engine.service";
 import { Shape } from "app/models/shape.enum";
 
 @Component({
@@ -8,12 +9,19 @@ import { Shape } from "app/models/shape.enum";
 })
 export class BoardComponent implements OnInit {
 
-  displayedShapes: Shape[] = [Shape.Rock, Shape.Paper, Shape.Scissors]
+  winner: string;
+
+  displayedShapes = [Shape.Rock, Shape.Paper, Shape.Scissors]
   selectedType: Shape;
 
-  constructor() { }
+  constructor(private engineService: EngineService) { }
 
   ngOnInit() {
+    this.engineService.currentWinner.subscribe(winner => this.winner = winner)
+  }   
+
+  selectShape(shape: Shape) {
+    this.engineService.submitResult(shape)
   }
 
 }
