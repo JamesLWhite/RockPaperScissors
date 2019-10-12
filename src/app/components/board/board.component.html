@@ -1,0 +1,2 @@
+{{selectedType}}
+<app-shape *ngFor="let type of displayedShapes" (selectedShape)="selectedType=$event" [type]="type"></app-shape>
