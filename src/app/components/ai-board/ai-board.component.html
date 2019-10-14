@@ -1,0 +1,3 @@
+<div>{{player}}</div>
+<div *ngIf="selectedShape"><i class="far fa-4x {{selectedShape.icon}}"></i></div>
+<app-shape *ngFor="let type of displayedShapes" [shape]="type"></app-shape>

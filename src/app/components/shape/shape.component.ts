@@ -1,10 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Shapes, Shape } from 'app/models/shape-types';
-
+import { Shapes, Shape, ShapeColour } from 'app/models/shape-types';
 
 @Component({
   selector: 'app-shape',
-  templateUrl: './shape.component.html',
+  template: `
+    <span class="{{shape.displayColor}}">
+        <i (click)=select() class="far {{shape.icon}}"></i>
+    </span>
+  `,
   styleUrls: ['./shape.component.scss']
 })
 export class ShapeComponent implements OnInit {
@@ -20,5 +23,4 @@ export class ShapeComponent implements OnInit {
   select(){
     this.selectedShape.emit(this.shape);
   }
-
 }

@@ -1,3 +1,5 @@
 <h1>{{title}}</h1>
-<app-board></app-board>
+<h2>{{winner}}</h2>
+<app-board [player]="'Player 1'"></app-board>
+<app-ai-board [player]="'Player 2'"></app-ai-board>
 <router-outlet></router-outlet>

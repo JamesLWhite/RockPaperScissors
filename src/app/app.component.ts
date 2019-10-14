@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EngineService } from "app/services/engine.service";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   
-  title = 'Rock Paper Scissors';
+  public title = 'Rock Paper Scissors';
+  public winner: string;
 
+  constructor(private engineService: EngineService){}
+
+  ngOnInit() {
+    this.engineService.currentWinner.subscribe(winner => this.winner = winner)
+  }  
 }
