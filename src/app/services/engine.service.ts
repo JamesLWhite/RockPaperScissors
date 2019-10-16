@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
-import { Shapes, Shape } from 'app/models/shape-types';
+import { Shape } from 'app/models/shape-types';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Shapes, Shape, ShapeColour } from 'app/models/shape-types';
+import { Shape } from 'app/models/shape-types';
 
 @Component({
   selector: 'app-shape',

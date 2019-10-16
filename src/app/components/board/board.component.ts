@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EngineService } from "app/services/engine.service";
-import { Shapes, Shape, ShapeFactory, ShapeColour } from 'app/models/shape-types';
+import { Shape, ShapeFactory, ShapeColour } from 'app/models/shape-types';
 
 @Component({
   selector: 'app-board',
