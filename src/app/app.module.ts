@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShapeComponent } from './components/shape/shape.component';
 import { BoardComponent } from './components/board/board.component';
 import { AiBoardComponent } from './components/ai-board/ai-board.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AiBoardComponent } from './components/ai-board/ai-board.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

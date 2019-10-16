@@ -34,7 +34,7 @@ export class BoardComponent implements OnInit {
 
     // Set the selected shapes
     this.displayedShapes.forEach(function (shape) {
-      shape.displayColor = ShapeColour.BLUE;
+      shape.displayColor = ShapeColour.DEFAULT;
     });
 
     this.selectedShape.displayColor = ShapeColour.GREEN

@@ -1,5 +1,11 @@
-<h1>{{title}}</h1>
-<h2>{{winner}}</h2>
-<app-board [player]="'Player 1'"></app-board>
-<app-ai-board [player]="'Player 2'"></app-ai-board>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <h1>{{title}}</h1>
+    </div>
+</nav>
+<div>
+    <app-board [player]="'Player 1'"></app-board>
+    <h2 class="text-center">{{winner}}</h2>
+    <app-ai-board [player]="'Player 2'"></app-ai-board>
+</div>
 <router-outlet></router-outlet>

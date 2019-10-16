@@ -1,7 +1,7 @@
 export enum ShapeColour{
     RED = "red",
     GREEN = "green",
-    BLUE = "blue"
+    DEFAULT = "default"
 }
 
 export enum ShapeIcon{
@@ -14,7 +14,7 @@ export class Shape {
     displayColor: string;
 
     constructor(public id: number, public icon: string, public displayName: string){
-        this.displayColor = ShapeColour.BLUE 
+        this.displayColor = ShapeColour.DEFAULT 
     }
 }
 

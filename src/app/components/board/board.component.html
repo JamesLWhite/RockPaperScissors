@@ -1,3 +1,4 @@
-<div>{{player}}</div>
-<div *ngIf="selectedShape"><i class="far fa-4x {{selectedShape.icon}}"></i></div>
-<app-shape *ngFor="let type of displayedShapes" (selectedShape)="selectShape($event)" [shape]="type"></app-shape>
+<div class="row justify-content-center">
+   <i class="far fa-8x fa-smile p-4"></i>
+    <app-shape *ngFor="let type of displayedShapes" (selectedShape)="selectShape($event)" [shape]="type"></app-shape>
+</div>

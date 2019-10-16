@@ -31,8 +31,8 @@ export class EngineService {
     
     // Display result
     switch (result){
-      case -1: winner = "PC Wins"; break;
-      case 1: winner = "Player Wins"; break;
+      case -1: winner = "Computer Wins!"; break;
+      case 1: winner = "You Win!"; break;
       case 0: winner = "Draw!"; break;
     }
 

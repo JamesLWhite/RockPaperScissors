@@ -3,11 +3,7 @@ import { Shape } from 'app/models/shape-types';
 
 @Component({
   selector: 'app-shape',
-  template: `
-    <span class="{{shape.displayColor}}">
-        <i (click)=select() class="far {{shape.icon}}"></i>
-    </span>
-  `,
+  templateUrl: 'shape.component.html',
   styleUrls: ['./shape.component.scss']
 })
 export class ShapeComponent implements OnInit {
