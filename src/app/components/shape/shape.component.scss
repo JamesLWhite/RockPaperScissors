@@ -2,6 +2,10 @@ $default: #f0a6ca;
 $green: #20ba41;
 $red: #c91836;
 
+.i{
+    background-clip: content-box;
+}
+
 .default {
     color: $default;
 }

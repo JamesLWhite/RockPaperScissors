@@ -1,3 +1,4 @@
-<span class="{{shape.displayColor}}">
-    <i (click)=select() class="far fa-8x {{shape.icon}} p-4"></i>
-</span>
+<i  (click)=select()
+    (mouseenter)=highlightToggle()
+    (mouseleave)=highlightToggle()
+    class="rounded {{shape.displayColor}} {{shapeFill()}} fa-8x {{shape.icon}} p-4"></i>

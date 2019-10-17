@@ -11,6 +11,8 @@ export class ShapeComponent implements OnInit {
   @Input() shape: Shape;
   @Output() selectedShape = new EventEmitter<Shape>();
 
+  shapeFillToggle = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -19,4 +21,13 @@ export class ShapeComponent implements OnInit {
   select(){
     this.selectedShape.emit(this.shape);
   }
+
+  highlightToggle(): void {
+    this.shapeFillToggle = !this.shapeFillToggle;
+  }
+
+  shapeFill(){
+    return this.shapeFillToggle ? 'fas' : 'far';
+  }
+
 }

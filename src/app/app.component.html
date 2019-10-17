@@ -3,9 +3,23 @@
         <h1>{{title}}</h1>
     </div>
 </nav>
-<div>
-    <app-board [player]="'Player 1'"></app-board>
-    <h2 class="text-center">{{winner}}</h2>
-    <app-ai-board [player]="'Player 2'"></app-ai-board>
+
+<div class="jumbotron align-self-center">
+    <div class="container">
+        <app-board [player]="'Player 1'"></app-board>
+        <h2 class="text-center">{{winner}}</h2>
+        <app-ai-board [player]="'Player 2'"></app-ai-board>
+    </div>
 </div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+    <a class="navbar-brand">James White</a>
+    <div class="f-right">
+      <a href="https://www.linkedin.com/in/james-lwhite/" target="_blank">
+        <i class="fab fa-3x fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/JamesLWhite" target="_blank">
+        <i class="pl-2 padding-right-1 fab fa-3x fa-github-square"></i>
+      </a>
+    </div>
+</nav>
 <router-outlet></router-outlet>
