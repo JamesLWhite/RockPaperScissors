@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShapeComponent } from './shape.component';
+import { ShapeFactory } from 'app/models/shape-types';
 
 describe('ShapeComponent', () => {
   let component: ShapeComponent;
@@ -16,6 +17,7 @@ describe('ShapeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShapeComponent);
     component = fixture.componentInstance;
+    component.shape = new ShapeFactory().createPaper()
     fixture.detectChanges();
   });
 

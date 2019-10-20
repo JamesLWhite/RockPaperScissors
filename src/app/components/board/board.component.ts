@@ -9,7 +9,7 @@ import { Shape, ShapeFactory, ShapeColour } from 'app/models/shape-types';
 })
 export class BoardComponent implements OnInit {
 
-  @Input() player: string
+  @Input() player: string;
 
   public winner: string;
 
