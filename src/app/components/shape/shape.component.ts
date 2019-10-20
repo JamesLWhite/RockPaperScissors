@@ -18,7 +18,7 @@ export class ShapeComponent implements OnInit {
   ngOnInit() {
   }
 
-  select(){
+  select() {
     this.selectedShape.emit(this.shape);
   }
 
@@ -26,8 +26,8 @@ export class ShapeComponent implements OnInit {
     this.shapeFillToggle = !this.shapeFillToggle;
   }
 
-  shapeFill(){
+  // Allows toggling between filled and bordered icons
+  shapeFill() {
     return this.shapeFillToggle ? 'fas' : 'far';
   }
-
 }

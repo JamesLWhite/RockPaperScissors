@@ -1,20 +1,20 @@
-export enum ShapeColour{
-    RED = "red",
-    GREEN = "green",
-    DEFAULT = "default"
+export enum ShapeColour {
+    RED = 'red',
+    GREEN = 'green',
+    DEFAULT = 'default'
 }
 
-export enum ShapeIcon{
-    ROCK = "fa-hand-rock",
-    PAPER = "fa-hand-paper",
-    SCISSORS = "fa-hand-scissors"
+export enum ShapeIcon {
+    ROCK = 'fa-hand-rock',
+    PAPER = 'fa-hand-paper',
+    SCISSORS = 'fa-hand-scissors'
 }
 
 export class Shape {
     displayColor: string;
 
-    constructor(public id: number, public icon: string, public displayName: string){
-        this.displayColor = ShapeColour.DEFAULT 
+    constructor(public id: number, public icon: string, public displayName: string) {
+        this.displayColor = ShapeColour.DEFAULT;
     }
 }
 
@@ -22,14 +22,14 @@ export class Shape {
 export class ShapeFactory {
 
     public createRock(): Shape {
-        return new Shape(0, ShapeIcon.ROCK, "Rock")
+        return new Shape(0, ShapeIcon.ROCK, 'Rock');
     }
-    
+
     public createPaper(): Shape {
-        return new Shape(1, ShapeIcon.PAPER, "Paper")
+        return new Shape(1, ShapeIcon.PAPER, 'Paper');
     }
-    
+
     public createScissors(): Shape {
-        return new Shape(2, ShapeIcon.SCISSORS, "Scissors")
+        return new Shape(2, ShapeIcon.SCISSORS, 'Scissors');
     }
 }

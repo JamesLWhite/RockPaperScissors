@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { EngineService } from "app/services/engine.service";
+import { Component, OnInit } from '@angular/core';
+import { EngineService } from 'app/services/engine.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +7,14 @@ import { EngineService } from "app/services/engine.service";
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
-  
+export class AppComponent implements OnInit {
+
   public title = 'Rock Paper Scissors';
   public winner: string;
 
-  constructor(private engineService: EngineService){}
+  constructor(private engineService: EngineService) { }
 
   ngOnInit() {
-    this.engineService.currentWinner.subscribe(winner => this.winner = winner)
-  }  
+    this.engineService.currentWinner.subscribe(winner => this.winner = winner);
+  }
 }

@@ -17,7 +17,7 @@ describe('ShapeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShapeComponent);
     component = fixture.componentInstance;
-    component.shape = new ShapeFactory().createPaper()
+    component.shape = new ShapeFactory().createPaper();
     fixture.detectChanges();
   });
 

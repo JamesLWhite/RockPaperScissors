@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { EngineService } from "app/services/engine.service";
+import { EngineService } from 'app/services/engine.service';
 import { Shape, ShapeFactory, ShapeColour } from 'app/models/shape-types';
 
 @Component({
@@ -17,27 +17,25 @@ export class BoardComponent implements OnInit {
   public selectedShape: Shape;
 
   constructor(private engineService: EngineService) {
-    let shapeFactory = new ShapeFactory(); 
+    const shapeFactory = new ShapeFactory();
     this.displayedShapes = [
       shapeFactory.createRock(),
       shapeFactory.createPaper(),
       shapeFactory.createScissors()
-    ]
+    ];
   }
 
   ngOnInit() {
-    this.engineService.currentWinner.subscribe(winner => this.winner = winner)
-  }   
+    this.engineService.currentWinner.subscribe(winner => this.winner = winner);
+  }
 
   selectShape(shape: Shape) {
-    this.selectedShape = shape
+    this.selectedShape = shape;
 
     // Set the selected shapes
-    this.displayedShapes.forEach(function (shape) {
-      shape.displayColor = ShapeColour.DEFAULT;
-    });
+    this.displayedShapes.forEach((displayShape) => displayShape.displayColor = ShapeColour.DEFAULT);
 
-    this.selectedShape.displayColor = ShapeColour.GREEN
-    this.engineService.submitResult(shape)
+    this.selectedShape.displayColor = ShapeColour.GREEN;
+    this.engineService.submitResult(shape);
   }
 }

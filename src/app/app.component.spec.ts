@@ -14,8 +14,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         BoardComponent,
-        AiBoardComponent, 
-        ShapeComponent,   
+        AiBoardComponent,
+        ShapeComponent,
       ],
     }).compileComponents();
   }));
